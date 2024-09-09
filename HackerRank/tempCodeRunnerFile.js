@@ -1,0 +1,1 @@
+    console.log(hour,'   ',minute,'   ',second,'   ',area); 

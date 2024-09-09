@@ -1,0 +1,12 @@
+const prompt = require('prompt-sync')(); 
+console.log('Nhap toa do diem A: '); 
+let input = prompt(); 
+let [xa,ya] = input.split(' ').map(item=>parseFloat(item.trim())); 
+console.log('Nhap toa do diem B: '); 
+input = prompt(); 
+let [xb,yb] = input.split(' ').map(item=>parseFloat(item.trim())); 
+console.log('Nhap toa do diem C: '); 
+input = prompt(); 
+let [xc,yc] = input.split(' ').map(item=>parseFloat(item.trim())); 
+var dienTich = 0.5 * Math.abs(xa*yb - xb*ya + xb*yc - xc*yb + xc*ya - xa*yc); 
+console.log(dienTich.toFixed(3)); 

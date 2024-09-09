@@ -1,0 +1,4 @@
+const get = require('prompt-sync')(); 
+let a = get().split(' ').map(x=>Number(x.trim())*2);  
+console.log(a); 
+//Su dung ham mui ten voi 1 bieu thuc khong can return 
