@@ -1,0 +1,30 @@
+1. Đồng bộ , bất đồng bộ 
+- Đồng bộ (Sync): 
+- Bất đồng bộ (ASync): setTimeout, setInterval, fetch, XMLHtpRequest, fileReading 
+- Các phương thức (ASync) đều cung cấp phương thức call-back function để xử lí 
+-> Vấn đề của bất đồng bộ 
+**Callback Hell: 
+-----------------------------------------------------------------------------------------
+setTimeout(function(){
+    console.log(1);  
+    setTimeout(function() { //loi goi ham co chua callback da truyen va hay chinh la so 2 trong doan code cua minh 
+        console.log(2); 
+        setTimeout(function() {
+            console.log(3)
+            setTimeout(function() {
+                console.log(4); 
+                setTimeout(function() {
+                    console.log(5); 
+                })
+            })
+        })
+    },1000); 
+},1000); 
+------------------------------------------------------------------------------------------
+2. Promise 
+var promise = new Promise(
+    function(reject , resolve) 
+    {
+        //Logic xu li 
+    }
+)

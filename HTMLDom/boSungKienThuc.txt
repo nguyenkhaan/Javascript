@@ -1,0 +1,21 @@
+MỘT SỐ KIẾN THỨC BỔ TRỢ
+1. Một số elment mới 
+<form> </form> : tạo 1 form biểu mẫu 
+<input> </input>: tạo ra kiểu đưa dữ liệu vào 
+<select> </select>: tạo 1 menu xổ xuống để người dùng chọn 
+<option> </option>: tên lựa chọn 
+<label> </label>: Đặt nhãn 
+<fieldset> </fieldset>: Tạo 1 vùng lưu trữ các element cùng loại 
+<legend> </legend>: đặt tên cho fieldset 
+2. Một số attribute mới 
+- for: dùng liên kết 1 label với 1 element có id tương ứng 
+- name: 
+    1. key - value cho biểu mẫu  -> lấy Element bằng name 
+        Giả sử ta lấy được form A 
+        A['name'].value -> tham chiếu tới đối tượng key_value đó 
+        A.elements['name']; 
+    2. document.getElementsByName
+    3. Nhóm các đối tượng thành 1 nhóm (input,...) 
+- action: link mà form sẽ gửi giá trị về
+- value: giá trị mặc định gửi về sever
+- type: 
