@@ -32,6 +32,7 @@
  * Vấn đề: Câu lệnh 2 cần dữ liệu của lệnh 1 để thực hiện. Câu lệnh 3 cần dữ liệu của 
  * lệnh 3 để thực hiện... => Callback Hell  
  * 2. Đối tượng promise 
+ * a) Giới thiệu 
  * - Là cơ chế để xứ lí các tác vụ bất đồng bộ 
  * - Cú pháp: 
  * var ten_promise = new Promise(
@@ -50,5 +51,18 @@
  *  })
  *  .finally(function() {
  *   })
+ * b) Tính chất của reject , resolve 
+ * b.1: Promise có 2 trạng thái: reject / resolve. Khi đã chạy một trong 2 thì tất cả 
+ * code phía sau dừng lại và không thể thay đổi trạng thái 
+ * b.2: Giả sử promise có trạng thái reject nhưng không tìm thấy catch -> chương 
+ * trình báo lỗi 
+ * b.3: resolve() , reject() chỉ nhận 1 tham số 
+ * 3. Promise chain
+ * a) Tính chuỗi của resolve 
+ * Khi một Promise được resolve, bạn có thể sử dụng .then() để thực thi một chuỗi các thao tác. Mỗi .then() trong chuỗi sẽ nhận kết quả từ .resolve() hoặc từ kết quả của .then() trước đó.
+Nếu bất kỳ .then() nào trả về một Promise mới, chuỗi sẽ đợi Promise đó hoàn thành trước khi tiếp tục.
+ * b) Tính chuỗi của reject 
+ * reject hoạt động khác một chút. Khi một Promise bị reject, nó sẽ chuyển thẳng đến phương thức .catch() đầu tiên trong chuỗi để xử lý lỗi, bỏ qua bất kỳ .then() nào chưa được xử lý.
+   Sau khi catch xử lý xong lỗi, bạn có thể tiếp tục chuỗi bằng cách sử dụng .then().
  * 
  */

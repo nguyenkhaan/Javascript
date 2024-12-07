@@ -29,3 +29,22 @@ promise
 .finally(function(data) {
     console.log('Done'); 
 })
+///////////////////////////////////////////////////////////////////////////////////////////////////
+function getPromise() 
+{
+    return new Promise( 
+        function(resolve) 
+        {
+            const data = "Day la du lieu"; 
+            resolve(data) //trong ham thi dung cach nay de truyen du lieu 
+        }
+    )
+}
+getPromise() 
+    .then(function(data) {
+        console.log(data); 
+        return data 
+    }) 
+    .then(function(data) {  //khong tra ve Promise ma chi la kieu du lieu binh thuong 
+        console.log(data) 
+    })

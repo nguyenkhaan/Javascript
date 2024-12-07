@@ -1,7 +1,6 @@
 //https://www.hackerrank.com/challenges/simple-array-sum/problem?isFullScreen=t
-const prompt = require('prompt-sync')(); 
-let n = Number(prompt()); 
-let a = prompt().split(' ').map(x=>Number(x.trim())); 
-let sum = 0; 
-for (let i = 0; i<n; ++i) sum += a[i]; 
-console.log(sum); 
+const readLine = require('prompt-sync')(); 
+let n = readLine() 
+const a = readLine().split(' ').map(x => Number(x.trim())); 
+let ans = a.reduce(((x,y) => x + y),0); 
+console.log(ans); 

@@ -14,7 +14,7 @@
  */
 class BankAccount 
 {
-    #balance; 
+    #balance; //khai bao private 
     constructor(balance) 
     {
         this.#balance = balance; 
